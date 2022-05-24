@@ -1,0 +1,10 @@
+.tool-versions
+/.bundle
+/log/*.log
+/tmp
+/config/application.yml
+*.orig
+/public/assets
+/config/master.key
+/app/assets/builds/*
+!/app/assets/builds/.keep
