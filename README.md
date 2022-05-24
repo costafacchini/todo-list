@@ -53,6 +53,12 @@ $ bin/rails db:setup
 $ bin/rails db:migrate
 ```
 
+## Run tests
+```bash
+# run rspec
+$ bundle exec rspec
+```
+
 ## Start Project
 ```bash
 # turn on docker
