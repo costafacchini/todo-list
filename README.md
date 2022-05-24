@@ -4,7 +4,7 @@ O desafio é fazer um TO DO List
 
 ## Specifications
 
-- [ ] Poder criar várias listas de TO DO
+- [x] Poder criar várias listas de TO DO
 - [ ] Cada lista tem que poder ser adicionado vários itens
 
 ## Setup Ruby (only if you have not installed)
