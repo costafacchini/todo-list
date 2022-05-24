@@ -1,0 +1,10 @@
+defaults: &defaults
+  DB_USERNAME: fill-with-your-username
+  DB_PASSWORD: fill-with-your-password
+  DB_HOSTNAME: fill-with-your-hostname
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
