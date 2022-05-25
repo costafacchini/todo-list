@@ -13,12 +13,13 @@ RSpec.describe 'todos/show', type: :view do
       ),
       TodoItem.create!(
         description: 'Batata',
-        todo_id: @todo.id
+        todo_id: @todo.id,
+        done: true
       )
     ])
   end
 
-  it 'renders attributes in <p>' do
+  it 'renders attributes' do
     render
     expect(rendered).to match(/Lista de compras/)
     expect(rendered).to match(/Detalhes da lista/)
