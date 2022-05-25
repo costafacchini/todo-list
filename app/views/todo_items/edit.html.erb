@@ -1,0 +1,7 @@
+<%= turbo_frame_tag dom_id(@todo_item) do %>
+  <%= form_with model: [ @todo, @todo_item ] do |form| %>
+    <%= form.text_field :description %>
+    <%= form.check_box :done %>
+    <%= form.submit %>
+  <% end %>
+<% end %>

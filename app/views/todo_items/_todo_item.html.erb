@@ -1,3 +1,13 @@
-<li>
-  <span><%= todo_item.description %></span>
+<li id='<%= "#{dom_id(todo_item)}_container" %>' >
+  <%= turbo_frame_tag dom_id(todo_item) do %>
+    <% if todo_item.errors.present? %>
+      <span><%= link_to todo_item.errors.full_messages, edit_todo_todo_item_path(todo_item.todo, todo_item) %></span>
+    <% end %>
+    <% if todo_item.done? %>
+      <strike><%= link_to todo_item.description, edit_todo_todo_item_path(todo_item.todo, todo_item) %></strike>
+    <% else %>
+      <span><%= link_to todo_item.description, edit_todo_todo_item_path(todo_item.todo, todo_item) %></span>
+    <% end %>
+  <% end %>
 </li>
+
