@@ -61,7 +61,7 @@ RSpec.describe '/todos', type: :request do
         }.to change(Todo, :count).by(0)
       end
 
-      it 'renders a successful response' do
+      it 'renders a error response' do
         post todos_url, params: { todo: invalid_attributes }
         expect(response).not_to be_successful
       end
@@ -91,7 +91,7 @@ RSpec.describe '/todos', type: :request do
     end
 
     context 'with invalid parameters' do
-      it 'renders a successful response' do
+      it 'renders a error response' do
         todo = Todo.create! valid_attributes
         patch todo_url(todo), params: { todo: invalid_attributes }
         expect(response).not_to be_successful

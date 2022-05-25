@@ -1,0 +1,9 @@
+<%= form_with model: [ @todo, @todo.todo_items.build ] do |form| %>
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_field :description %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
