@@ -3,8 +3,18 @@
 <%= render @todo %>
 
 <div>
-  <%= link_to "Edit this todo", edit_todo_path(@todo) %> |
-  <%= link_to "Back to todos", todos_path %>
-
-  <%= button_to "Destroy this todo", @todo, method: :delete %>
+  <%= link_to "Edit", edit_todo_path(@todo) %> |
+  <%= link_to "Back", todos_path %> |
+  <%= link_to "Destroy", todo_path(@todo), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
 </div>
+
+<h2>Items</h2>
+<ul>
+  <%= render @todo.todo_items %>
+</ul>
+
+<h2>Add a todo item:</h2>
+<%= render 'todo_items/form' %>
